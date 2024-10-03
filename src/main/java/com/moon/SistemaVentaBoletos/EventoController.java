@@ -31,8 +31,12 @@ public class EventoController {
 
     @PostMapping
     public ResponseEntity<Evento> crearEvento(@RequestBody Evento evento){
-        Evento eventoNuevo = eventoService.crearEvento(evento);
-        return new ResponseEntity<>(eventoNuevo, HttpStatus.CREATED);
+        try {
+            Evento nuevoEvento = eventoService.crearEvento(evento);
+            return new ResponseEntity<>(nuevoEvento, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PutMapping("/{id}")
