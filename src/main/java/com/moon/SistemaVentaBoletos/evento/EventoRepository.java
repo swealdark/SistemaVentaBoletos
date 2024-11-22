@@ -1,4 +1,4 @@
-package com.moon.SistemaVentaBoletos;
+package com.moon.SistemaVentaBoletos.evento;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

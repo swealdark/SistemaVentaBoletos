@@ -1,4 +1,4 @@
-package com.moon.SistemaVentaBoletos;
+package com.moon.SistemaVentaBoletos.evento;
 
 
 import jakarta.persistence.Entity;
